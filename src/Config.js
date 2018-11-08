@@ -247,7 +247,11 @@ export class Config {
   }
 
   get verifyEmailSuccessURL() {
-    return this.customPages.verifyEmailSuccess || `${this.publicServerURL}/apps/verify_email_success.html`;
+    if (process.env.APP_NAME.indexOf('-dev') !== -1) {
+      return `${this.publicServerURL}/apps/verify_dev_email_success.html`
+    } else {
+      return `${this.publicServerURL}/apps/verify_email_success.html`
+    }
   }
 
   get choosePasswordURL() {

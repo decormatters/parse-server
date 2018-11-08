@@ -211,14 +211,13 @@ export class UserController extends AdaptableController {
       });
   }
 
-  defaultVerificationEmail({link, user, appName, }) {
-    const text = "Hi,\n\n" +
-        "You are being asked to confirm the e-mail address " + user.get("email") + " with " + appName + "\n\n" +
-        "" +
-        "Click here to confirm it:\n" + link;
+  defaultVerificationEmail({ link, user, appName }) {
+    appName = "DecorMatters"
+    const text = "Hi,\n\n" + "You are being asked to confirm the e-mail address " + user.get("email") + " with " + appName + "\n\n" + "" + "Click here to confirm it:\n" + link;
+    const html = "Hi,\n\n" + "You are being asked to confirm the e-mail address " + user.get("email") + " with " + appName + "\n\n" + "" + "Click here to confirm it:\n" + link;
     const to = user.get("email");
     const subject = 'Please verify your e-mail for ' + appName;
-    return { text, to, subject };
+    return { html, text, to, subject };
   }
 
   defaultResetPasswordEmail({link, user, appName, }) {
