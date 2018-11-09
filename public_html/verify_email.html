@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Confirm Email on DecorMatters</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 " />
+	<link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
+	<style type="text/css">
+		body {
+			margin: 0 !important;
+			padding: 0 !important;
+			-webkit-text-size-adjust: 100% !important;
+			-ms-text-size-adjust: 100% !important;
+			-webkit-font-smoothing: antialiased !important;
+		}
+		.email-main {
+			font-family: 'Libre Franklin', sans-serif;
+			line-height: 28px;
+		}
+		h4{
+			font-weight: 400;
+		}
+		.email-content {
+			max-width: 700px;
+			margin: 1vw 10vw;
+			display: block;
+		}
+		.logo {
+			margin-left: -10px;
+			margin-top: 30px;
+		}
+		.email-title {
+			line-height: 40px;
+			font-weight: 800;
+		}
+		.email-address {
+			color: #4A90E2;
+			font-weight: bold;
+		}
+		.email-confirm {
+			/* Rectangle 2: */
+			background: #EDA590;
+			border-radius: 23px;
+			border-color: #EDA590;
+			padding: 7px 30px;
+			/* Confirm Email Addres: */
+			font-family: Helvetica-Bold;
+			font-size: 1em;
+			color: #FFFFFF;
+			letter-spacing: 0;
+			margin: 5% auto;
+			text-decoration: none;
+			display: inline-block;
+		}
+		.email-seperate-line {
+			height: 1px;
+			border: 0;
+			border-top: 1px solid #bbb;
+			margin: 7.5% auto 5%;
+			width: 100%;
+		}
+		a.foot-link {
+			text-decoration: none;
+			color: #000000;
+		}
+		a.foot-link:hover {
+			text-decoration: underline;
+			text-decoration-color: #000000; 
+		}
+		.foot-dot {
+		  height: 5px;
+		  width: 5px;
+		  background-color: #bbb;
+		  border-radius: 50%;
+		  display: inline-block;
+		  margin: 3px 20px;
+		}
+		.foot-text {
+			font-size: 0.8em;
+		}
+	</style>
+</head>
+<body>
+	<table class="email-main" cellspacing="0" cellpadding="0" border="0" align="center"> 
+        <tbody class="email-content">
+        	<!--Header section-->
+        	<tr>
+	          	<td>
+				    <img class="logo" alt="DecorMatters Logo" style="display:block;" src="dm-logo.png" width="80" align="left">
+        		</td>
+        	</tr>
+	        <!--//Header section--> 
+	        <!--Banner section-->
+	        <tr>
+	          	<td valign="top" align="center">
+                	<h2 class="email-title" align="left">
+                		Confirm your email address on DecorMatters
+                	</h2>
+                	<h4 align="left">
+                		Hello! We just need to verify that <var class="email-address"><%= useremail %></var> is your email address, and then we’ll help you to start your interior design projects.
+                	</h4>
+                	<h4 align="left">
+                		📱<b>From your mobile device</b>, tap the button below to confirm:
+                	</h4>
+                	<a href="<%= verificationlink %>" class="email-confirm" >Confirm Email Address</a>
+                	<h4 align="left">
+                		<br>	
+                		<b>Didn’t request this email?</b>
+                		<br>
+						No worries! Your address may have been entered by mistake. If you ignore or delete this email, nothing further will happen.
+                	</h4>
+				</td>
+    		</tr>
+    		<!--//Banner section--> 
+    		<!--Footer Section-->
+	        <tr>
+	          	<td class="" valign="top" align="center">
+	          		<hr class="email-seperate-line">
+                	<p class="foot-text" valign="top" align="center">
+	                	Made by <a class="foot-link" href="https://www.decormatters.com" target="_blank"><b>DecorMatters, Inc</b></a>
+	                	<br>
+						1851 McCarthy Blvd Milpitas, CA 95035 USA
+						<br>
+						<br>	
+	                	<a class="foot-link" href="https://www.decormatters.com/blog.php" target="_blank">Our Blog</a> 
+	                	<span class="foot-dot"></span> 
+	                	<a class="foot-link" href="https://www.decormatters.com" target="_blank">Home</a> 
+	                	<span class="foot-dot"></span>
+	                	<a class="foot-link" href="https://www.decormatters.com/privacy-policy.php" target="_blank">Policies</a>
+              		</p>
+			    </td>
+	        </tr>
+  		</tbody>
+  	</table>
+
+</body>
+</html>

@@ -7,6 +7,12 @@ import Parse               from 'parse/node';
 
 var RestQuery = require('../RestQuery');
 var Auth = require('../Auth');
+var fs = require('fs');
+
+require.extensions['.html'] = function (module, filename) {
+    module.exports = fs.readFileSync(filename, 'utf8');
+};
+var verifyEmailHtml = require('../../public_html/verify_email.html');
 
 export class UserController extends AdaptableController {
 
@@ -214,7 +220,10 @@ export class UserController extends AdaptableController {
   defaultVerificationEmail({ link, user, appName }) {
     appName = "DecorMatters"
     const text = "Hi,\n\n" + "You are being asked to confirm the e-mail address " + user.get("email") + " with " + appName + "\n\n" + "" + "Click here to confirm it:\n" + link;
-    const html = "Hi,\n\n" + "You are being asked to confirm the e-mail address " + user.get("email") + " with " + appName + "\n\n" + "" + "Click here to confirm it:\n" + link;
+
+    const html = verifyEmailHtml.replace('<%= useremail %>', user.get('email'))
+                                .replace('<%= verificationlink %>', link)
+
     const to = user.get("email");
     const subject = 'Please verify your e-mail for ' + appName;
     return { html, text, to, subject };
