@@ -1,45 +1,114 @@
 <!DOCTYPE html>
 <html>
-  <!-- This page is displayed whenever someone has successfully reset their password.
-       Pro and Enterprise accounts may edit this page and tell Parse to use that custom
-       version in their Parse app. See the App Settigns page for more information.
-       This page will be called with the query param 'username'
-   -->
-   <head>
-      <title>Email Verification</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <style type='text/css'>
-    h1 {
-      color: #000;
-      display: block;
-      font: inherit;
-      font-family: 'Helvetica Neue', Helvetica;
-      font-size: 20px;
-      font-weight: 400;
-      height: 30px;
-      line-height: 30px;
-      margin: 45px 45px 45px 45px;
-      padding: 0px 8px 0px 8px;
-      text-decoration: none;
-    }
-    a:hover, a:visited, a:link, a:active
-    {
-      text-decoration: none;
-    }
-    div {
-      display: block;
-      margin: 80px 45px 45px 45px;
-      padding: 0px 8px 0px 8px;
-    }
+<head>
+	<title>Continue on DecorMatters App</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 " />
+	<link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,500,600" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+	<style type="text/css">
+		.content {
+			text-align: center;
+		}
 
-  </style>
-  <body>
-      <a href="https://decormatters.app.link/">
-        <h1>You have successfully verified your email. Tap anywhere to return to DecorMatters</h1>
-          <div>
-            <img src="https://decormatters.com/images/logo/dm-logo-white@2x.png"/>
-          </div>
-        </a>
-      </body>
+		/*Realy large screen*/
+		@media only screen and (min-width: 4000px) {
+			.continue-text {
+				font-family: 'Libre Franklin', sans-serif;
+				font-weight: 500;	
+				margin: 20vw auto 4vw;
+				color: #4A4A4A;
+				font-size: 1vw;
+			}
+			.email-confirm {
+				/* Rectangle 2: */
+				background: #EDA590;
+				border-radius: 10vw;
+				border-color: #EDA590;
+				padding: 0.5% 2%;
+				/* Confirm Email Addres: */
+				font-family: 'Roboto', sans-serif;
+				font-weight: bold;
+				font-size: 1.2vw;
+				color: #FFFFFF;
+				letter-spacing: 0;
+				margin: auto auto;
+				text-decoration: none;
+				display: inline-block;
+			}
+			.logo {
+				display:block;
+				width: 1.4vw;
+				margin: auto 1vw auto 0;
+			}
+		}
+		@media only screen and (max-width: 3999px) and (min-width: 769px) {
+			.continue-text {
+				font-family: 'Libre Franklin', sans-serif;
+				font-weight: 500;	
+				margin: 25vw auto 4vw;
+				color: #4A4A4A;
+				font-size: 1.6vw;
+			}
+			.email-confirm {
+				/* Rectangle 2: */
+				background: #EDA590;
+				border-radius: 10vw;
+				border-color: #EDA590;
+				padding: 1.5% 3%;
+				/* Confirm Email Addres: */
+				font-family: 'Roboto', sans-serif;
+				font-weight: bold;
+				font-size: 1.9vw;
+				color: #FFFFFF;
+				letter-spacing: 0;
+				margin: auto auto;
+				text-decoration: none;
+				display: inline-block;
+			}
+			.logo {
+				display:block;
+				width: 2.3vw;
+				margin: auto 1vw auto 0;
+			}
+		}
+		@media only screen and (max-width: 768px) {
+			.continue-text {
+				font-family: 'Libre Franklin', sans-serif;
+				font-weight: 500;	
+				margin: 40vw auto 7vw;
+				color: #4A4A4A;
+				font-size: 3.7vw;
+			}
+			.email-confirm {
+				/* Rectangle 2: */
+				background: #EDA590;
+				border-radius: 10vw;
+				border-color: #EDA590;
+				padding: 3% 7%;
+				/* Confirm Email Addres: */
+				font-family: 'Roboto', sans-serif;
+				font-weight: bold;
+				font-size: 5vw;
+				color: #FFFFFF;
+				letter-spacing: 0;
+				margin: auto auto;
+				text-decoration: none;
+				display: inline-block;
+			}
+			.logo {
+				display:block;
+				width: 6vw;
+				margin: auto 2vw auto 0;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<h2 class="continue-text">You'll need to use the DecorMatters App to continue.</h2>
+		<a href="https://decormatters.app.link/" class="email-confirm" align="center"><img class="logo" alt="DecorMatters Logo" src="https://s3-us-west-1.amazonaws.com/decormatters-marketing/thanksgiving-giveaway/logo-icon-round.png" align="left"> Open in DecorMatters</a>
+	</div>
+</body>
 </html>
